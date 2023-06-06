@@ -1,0 +1,78 @@
+<html>
+    <style>
+        .grandfather {width:1500px;
+            height:400px;
+            position:relative;
+            border:2px solid gray;
+
+
+}
+
+.father,
+.uncle {
+  width: 50%;
+  border: 1px solid black;
+  padding: 10px;
+  position:
+  display: flex;
+
+}
+
+.person {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.children {
+  border: 1px solid black;
+}
+
+.children > div {
+  font-size: 40px;
+}
+
+.uncle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+    </style>
+    <div class="grandfather">
+        <p>grand father</p>
+        <div class="father">
+            <p>father</p>
+          <div class="person">
+            <p>person_1</p>
+            <div class="children">
+                <p>child_1</p>
+            </div>
+            <div class="children">
+                <p>child_2</p>
+            </div>
+            </div>
+            <div class="children">
+                <p>child_3</p>
+                <div class="children">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="uncle">
+          <div class="person"></div>
+          <div class="person">
+            <div class="children"></div>
+            <div class="children">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+            </div>
+            <div class="children"></div>
+          </div>
+        </div>
+      </div>
+      
+</html>
