@@ -14,7 +14,8 @@
 <script>
     function submit(){
         let a=document.getElementById("myInput").value
-        document.getElementById("enteredvalue").innerText= a
+        let b=document.getElementById("enteredvalue")
+        b.innerText=`EnteredValue : ${a}`
         alert(a)
     }
 </script>
