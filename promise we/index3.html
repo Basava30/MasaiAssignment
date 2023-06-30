@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp Promise</title>
+</head>
+<body>
+    <input type="number" placeholder="enter otp" value=""/>
+    <button onclick="enter()">submit</button>
+</body>
+</html>
+<script>
+    function enter() {
+        let a=document.querySelector("input").value
+        let prom = new Promise(function(resolve,reject){
+            setTimeout(function(){
+            if (a==1234){
+                resolve("OTP is correct")
+            }
+            else{
+                reject("OTP is incorrect")
+            }
+        },2000)
+        })
+        console.log(prom);
+        
+        prom.then((function(hi){
+        alert(hi)})).catch(function(hello){
+            alert(hello)
+        })
+    }
+    
+</script>
