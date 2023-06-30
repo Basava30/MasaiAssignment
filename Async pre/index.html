@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        div{
+            display: flex;
+            margin: 20px;
+            gap: 30px;            
+        }
+        #hour{
+            font-size: 50px;
+        }
+        #min{
+            font-size: 50px;
+        }
+        #sec{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1 id="hour">0</h1>
+    <h1 id="min">0</h1>
+    <h1 id="sec">0</h1>
+</div>
+</body>
+</html>
+<script>
+    var Hour=document.getElementById("hour")
+    var Min=document.getElementById("min")
+    var Sec=document.getElementById("sec")
+    
+    var h=0;
+    var m=0;
+    var s=0;
+
+    setInterval(function () {
+        s++
+        if (s>=60){
+            s=0;
+            m++
+            if (m>=60){
+                m=0;
+                h++
+                Hour.innerText=h
+            }
+            Min.innerText= m
+        }
+       Sec.innerText=  s
+    },1000)
+    Hour.style.backgroundColor="teal"
+    Min.style.backgroundColor="Pink"
+    Sec.style.backgroundColor="lightblue"
+</script>
